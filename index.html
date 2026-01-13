@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PamOut.com - AI 기반 한영 번역 및 영어 표현 마스터 앱" />
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="keywords" content="영어학습, 한영번역, AI번역, PamOut, 영어표현" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PamOut.com" />
+    <meta property="og:description" content="AI 기반 한영 번역 & 영어 표현 마스터" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PamOut.com" />
+    <meta name="twitter:description" content="AI 기반 한영 번역 & 영어 표현 마스터" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7966547821641531"
+        crossorigin="anonymous"></script>
+
+    <title>PamOut.com - AI 한영 번역 & 영어 마스터</title>
+
+    <style>
+      /* Critical CSS for initial load */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #faf5ff 100%);
+        overflow-x: hidden;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e1b4b 100%);
+        }
+      }
+
+      #root {
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      /* Loading state */
+      .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        gap: 1.5rem;
+        background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #faf5ff 100%);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .loading-container {
+          background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e1b4b 100%);
+        }
+      }
+
+      .loading-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .loading-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.5);
+      }
+
+      .loading-icon svg {
+        width: 28px;
+        height: 28px;
+        color: white;
+      }
+
+      .loading-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e0e7ff;
+        border-top-color: #6366f1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .loading-spinner {
+          border-color: #312e81;
+          border-top-color: #818cf8;
+        }
+      }
+
+      .loading-text {
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .loading-text {
+          color: #9ca3af;
+        }
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Hide scrollbar but allow scrolling */
+      body::-webkit-scrollbar {
+        width: 8px;
+      }
+      body::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      body::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      body::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      @media (prefers-color-scheme: dark) {
+        body::-webkit-scrollbar-thumb {
+          background: #475569;
+        }
+        body::-webkit-scrollbar-thumb:hover {
+          background: #64748b;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/main-B7PRMJxS.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-F9Y4d3HK.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-CPiG7eVD.js">
+    <link rel="modulepreload" crossorigin href="/assets/state-DiUmoWSs.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-BwZ3FiQZ.css">
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading state while JS loads -->
+      <div class="loading-container">
+        <div class="loading-logo">
+          <div class="loading-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+              <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+            </svg>
+          </div>
+          <span class="loading-title">PamOut.com</span>
+        </div>
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading...</div>
+      </div>
+    </div>
+  </body>
+</html>
